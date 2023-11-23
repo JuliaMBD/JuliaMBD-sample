@@ -1,4 +1,3 @@
-#drawioを作る際にモデルの指定をミスした可能性あり、Vehicle2
 using CSV
 using DataFrames
 using JuliaMBD
