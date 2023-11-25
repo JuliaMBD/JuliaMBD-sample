@@ -24,7 +24,7 @@ using Test
         end
     end
     m = @compile testblock()
-    res = simulate(m, tspan=[0, 100])
+    res = simulate(m, tspan=[0, 60])
     display(plot(res, layout=(2,2)))
 end
 
@@ -173,7 +173,7 @@ end
     end
     
     m = @compile testblock()
-    res = simulate(m, tspan=[0, 100])
+    res = simulate(m, tspan=[0, 60])
     display(plot(res, layout=(3,2)))
 end
 
