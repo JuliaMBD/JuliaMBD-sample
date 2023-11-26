@@ -471,11 +471,12 @@ end
     @model testblock begin
         @block begin
             m = SUS_F_PNT()
-            s1 = Step(steptime=0.1, finalvalue=5)
+            step1 = Step(steptime=0.1, finalvalue=5)
+            step2 = Step(steptime=0.1, finalvalue=10)
         end
         @connect begin
-            s1.out => m.v_VL2SUS_F_mps
-            s1.out => m.v_MUS_F2SUS_F_mps
+            step1.out => m.v_VL2SUS_F_mps
+            step2.out => m.v_MUS_F2SUS_F_mps
         end
         @scope begin
             m.v_VL2SUS_F_mps => v_VL2SUS_F_mps
@@ -516,11 +517,12 @@ end
     @model testblock begin
         @block begin
             m = SUS_R_PNT()
-            s1 = Step(steptime=0.1, finalvalue=5)
+            step1 = Step(steptime=0.1, finalvalue=5)
+            step2 = Step(steptime=0.1, finalvalue=10)
         end
         @connect begin
-            s1.out => m.v_VL2SUS_R_mps
-            s1.out => m.v_MUS_R2SUS_R_mps
+            step1.out => m.v_VL2SUS_R_mps
+            step2.out => m.v_MUS_R2SUS_R_mps
         end
         @scope begin
             m.v_VL2SUS_R_mps => v_VL2SUS_R_mps
