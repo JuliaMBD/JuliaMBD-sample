@@ -182,46 +182,46 @@ end
 
 ###
 
-@model front_damper begin
+@model front_damper2 begin
     df = CSV.read("damper_rate.csv", DataFrame)
     @parameter begin
         d_Fr_sus_fric_gain = 10000
         d_Fr_sus_fric = 40
     end
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2front_damper")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "front_damper2")
 end
 
 ###
 
-@model SUS_F_PNT begin
+@model SUS_F_PNT2 begin
     @parameter begin
         L_ratio_Fr_sus = 1.2048
         z_k_Fr_sus_ini = 0.10755
         k_Fr_sus = 30690
     end
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2SUS_F_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "SUS_F_PNT2")
 end
 
 ###
 
-@model rear_damper begin
+@model rear_damper2 begin
     df = CSV.read("damper_rate.csv", DataFrame)
     @parameter begin
         d_Rr_sus_fric_gain = 10000
         d_Rr_sus_fric = 30
     end
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2rear_damper")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "rear_damper2")
 end
 
 ###
 
-@model SUS_R_PNT begin
+@model SUS_R_PNT2 begin
     @parameter begin
         L_ratio_Rr_sus = 1.2048
         z_k_Rr_sus_ini = 0.076651
         k_Rr_sus = 30690
     end
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2SUS_R_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "SUS_R_PNT2")
 end
 
 ###
@@ -313,15 +313,15 @@ end
     RD_PNT,
     ST_F_PNT,
     ST_R_PNT,
-    front_damper,
-    SUS_F_PNT,
-    rear_damper,
-    SUS_R_PNT,
+    front_damper2,
+    SUS_F_PNT2,
+    rear_damper2,
+    SUS_R_PNT2,
     TR_F_PNT,
     TR_R_PNT,
     pitch_rate_vl,
     v_z_carbody_vl,
     z_velocity_vl,
     VL_PNT,
-    Vehicle
+    #Vehicle
 )

@@ -53,8 +53,6 @@ end
 
 ####
 
-
-
 @testset "pitch_rate" begin
     @model testblock begin
         @block begin
@@ -473,12 +471,11 @@ end
     @model testblock begin
         @block begin
             m = SUS_F_PNT()
-            step1 = Step(steptime=0.1, finalvalue=5)
-            step2 = Step(steptime=0.1, finalvalue=10)
+            s1 = Step(steptime=0.1, finalvalue=5)
         end
         @connect begin
-            step1.out => m.v_VL2SUS_F_mps
-            step2.out => m.v_MUS_F2SUS_F_mps
+            s1.out => m.v_VL2SUS_F_mps
+            s1.out => m.v_MUS_F2SUS_F_mps
         end
         @scope begin
             m.v_VL2SUS_F_mps => v_VL2SUS_F_mps
@@ -519,12 +516,11 @@ end
     @model testblock begin
         @block begin
             m = SUS_R_PNT()
-            step1 = Step(steptime=0.1, finalvalue=5)
-            step2 = Step(steptime=0.1, finalvalue=10)
+            s1 = Step(steptime=0.1, finalvalue=5)
         end
         @connect begin
-            step1.out => m.v_VL2SUS_R_mps
-            step2.out => m.v_MUS_R2SUS_R_mps
+            s1.out => m.v_VL2SUS_R_mps
+            s1.out => m.v_MUS_R2SUS_R_mps
         end
         @scope begin
             m.v_VL2SUS_R_mps => v_VL2SUS_R_mps
@@ -725,6 +721,26 @@ end
     res = simulate(m, tspan=[0, 60])
     display(plot(res, layout=(3,4)))
 end
+
+
+
+@testset "Vehicle" begin
+    @model testblock begin
+        @block begin
+            m = Vehicle()
+            #s1 = Step(steptime=0.1, finalvalue=5)
+        end
+        @scope begin
+            m.v1 => v1
+            m.v2 => v2
+        end
+    end
+    
+    m = @compile testblock()
+    res = simulate(m, tspan=[0, 60])
+    display(plot(res))
+end
+
 
 nothing
 
