@@ -7850,7 +7850,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="9cdP3b1CDCtv5b4hbvaO" name="SUS_F_PNT">
-        <mxGraphModel dx="1503" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1291" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -8152,7 +8152,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="SUS_F_PNT2" id="BDAXgn5tlaJTpmYMsjG4">
-        <mxGraphModel dx="1503" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1291" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="w1iorvUm2qKLRfeUJV66-0"/>
                 <mxCell id="w1iorvUm2qKLRfeUJV66-1" parent="w1iorvUm2qKLRfeUJV66-0"/>
@@ -8937,7 +8937,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="rear_damper2" id="RAW37zYpFnbwHq_IoosX">
-        <mxGraphModel dx="676" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="464" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="jv9hvNiL6ZN9UmduN9Mj-0"/>
                 <mxCell id="jv9hvNiL6ZN9UmduN9Mj-1" parent="jv9hvNiL6ZN9UmduN9Mj-0"/>
@@ -9118,7 +9118,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="rear_damper2-1" id="DuRGMT1MNRM1O89IeOe1">
-        <mxGraphModel dx="676" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="464" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="z_Tlz40yWtIMxaCew7D1-0"/>
                 <mxCell id="z_Tlz40yWtIMxaCew7D1-1" parent="z_Tlz40yWtIMxaCew7D1-0"/>
@@ -9603,7 +9603,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="SUS_R_PNT2" id="LctpSzSJF1W2rt_ipaZn">
-        <mxGraphModel dx="1503" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1291" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="iOs2X-Ru5yzcYhzDdSQJ-0"/>
                 <mxCell id="iOs2X-Ru5yzcYhzDdSQJ-1" parent="iOs2X-Ru5yzcYhzDdSQJ-0"/>

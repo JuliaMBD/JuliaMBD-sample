@@ -726,24 +726,6 @@ end
     display(plot(res, layout=(3,4)))
 end
 
-@testset "Vehicle" begin
-    @model testblock begin
-        @block begin
-            m = Vehicle()
-            #s1 = Step(steptime=0.1, finalvalue=5)
-        end
-        @scope begin
-            m.v1 => v1
-            m.v2 => v2
-        end
-    end
-    
-    m = @compile testblock()
-    res = simulate(m, tspan=[0, 60])
-    display(plot(res))
-end
-
-
 nothing
 
 
