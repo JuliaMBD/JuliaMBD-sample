@@ -1018,7 +1018,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="ENG_MNT_F_PNT" id="CtP7WaxaoXvCWc7sOSym">
-        <mxGraphModel dx="676" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="464" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="EQ1Rm-cGkCLd_t7NgZDF-0"/>
                 <mxCell id="EQ1Rm-cGkCLd_t7NgZDF-1" parent="EQ1Rm-cGkCLd_t7NgZDF-0"/>
@@ -1226,7 +1226,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="ENG_MNT_R_PNT" id="bphCY3ozLcyeEHqKbA0R">
-        <mxGraphModel dx="676" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="464" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="uEOlPHYpv0gLynLyvFwg-0"/>
                 <mxCell id="uEOlPHYpv0gLynLyvFwg-1" parent="uEOlPHYpv0gLynLyvFwg-0"/>
@@ -1631,7 +1631,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="BfrIXrFJQdTRdFI2xvEo" name="v_z_carbody">
-        <mxGraphModel dx="676" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="464" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
