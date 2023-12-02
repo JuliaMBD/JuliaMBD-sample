@@ -179,10 +179,10 @@ end
     display(plot(res, layout=(3,2)))
 end
 
-@testset "HM_HD_F_PNT" begin
+@testset "HM_HD_F_PNT2" begin
     @model testblock begin
         @block begin
-            m = HM_HD_F_PNT()
+            m = HM_HD_F_PNT2()
             s1 = Step(steptime=0.1, finalvalue=5)
         end
         @connect begin
@@ -219,10 +219,10 @@ end
     display(plot(res))
 end
 
-@testset "HM_F_PNT" begin
+@testset "HM_F_PNT2" begin
     @model testblock begin
         @block begin
-            m = HM_F_PNT()
+            m = HM_F_PNT2()
             s1 = Step(steptime=0.1, finalvalue=5)
         end
         @connect begin
@@ -269,10 +269,10 @@ end
     display(plot(res, layout=(3,2)))
 end
 
-@testset "HM_HD_R_PNT" begin
+@testset "HM_HD_R_PNT2" begin
     @model testblock begin
         @block begin
-            m = HM_HD_R_PNT()
+            m = HM_HD_R_PNT2()
             s1 = Step(steptime=0.1, finalvalue=5)
         end
         @connect begin
@@ -309,10 +309,10 @@ end
     display(plot(res))
 end
 
-@testset "HM_R_PNT" begin
+@testset "HM_R_PNT2" begin
     @model testblock begin
         @block begin
-            m = HM_R_PNT()
+            m = HM_R_PNT2()
             s1 = Step(steptime=0.1, finalvalue=5)
         end
         @connect begin
@@ -381,10 +381,10 @@ end
 
 ###
 
-@testset "RD_PNT" begin
+@testset "RD_PNT2" begin
     @model testblock begin
         @block begin
-            m = RD_PNT()
+            m = RD_PNT2()
         end
         @scope begin
             m.v_RD2TR_F_mps => v_RD2TR_F_mps
