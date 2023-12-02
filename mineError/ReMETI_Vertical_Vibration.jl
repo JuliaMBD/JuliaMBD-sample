@@ -69,7 +69,7 @@ end
         x_k_Fr_head_ini = -0.011885
         g = 9.8
     end
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2HM_HD_F_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_HD_F_PNT2")
 end
 
 @model HM_VS_F_PNT begin
@@ -84,7 +84,7 @@ end
 end
 
 @model HM_F_PNT begin
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_F_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2HM_F_PNT")
 end
 
 ###
@@ -108,7 +108,7 @@ end
         x_k_Rr_head_ini = -0.011885
         g = 9.8
     end
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2HM_HD_R_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_HD_R_PNT2")
 end
 
 @model HM_VS_R_PNT begin
@@ -123,7 +123,7 @@ end
 end
 
 @model HM_R_PNT begin
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_R_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2HM_R_PNT")
 end
 
 ###
@@ -288,7 +288,7 @@ end
 ###
 
 @model Vehicle begin
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "Vehicle")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2Vehicle")
 end
 
 ###

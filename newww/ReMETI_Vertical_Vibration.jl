@@ -290,7 +290,7 @@ end
 
 ###
 
-@buildxml("models2.xml",
+@buildxml("models.xml",
     ENG_MNT_F_PNT,
     ENG_MNT_R_PNT,
     pitch_rate,
