@@ -58,7 +58,7 @@ end
     @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_BD_F_PNT")
 end
 
-@model HM_HD_F_PNT begin
+@model HM_HD_F_PNT2 begin
     @parameter begin
         M_Fr_head = 27.6
         r_Fr_head = 0.21857
@@ -83,8 +83,8 @@ end
     @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_VS_F_PNT")
 end
 
-@model HM_F_PNT begin
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2HM_F_PNT")
+@model HM_F_PNT2 begin
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_F_PNT2")
 end
 
 ###
@@ -97,7 +97,7 @@ end
     @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_BD_R_PNT")
 end
 
-@model HM_HD_R_PNT begin
+@model HM_HD_R_PNT2 begin
     @parameter begin
         M_Rr_head = 27.6
         r_Rr_head = 0.21857
@@ -122,8 +122,8 @@ end
     @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_VS_R_PNT")
 end
 
-@model HM_R_PNT begin
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2HM_R_PNT")
+@model HM_R_PNT2 begin
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "HM_R_PNT2")
 end
 
 ###
@@ -148,14 +148,14 @@ end
 
 ###
 #
-@model RD_PNT begin
+@model RD_PNT2 begin
     df = CSV.read("road_surface.csv", DataFrame)
     @parameter begin
         kmph2mps = 0.27778
         I_wheelbase = 2.635
         vel_car_kmph = 60
     end
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2RD_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "RD_PNT2")
 end
 
 ###
@@ -287,9 +287,9 @@ end
 
 ###
 
-@model Vehicle begin
-    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2Vehicle")
-end
+#@model Vehicle begin
+#    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "2Vehicle")
+#end
 
 ###
 
@@ -301,16 +301,16 @@ end
     z_velocity,
     ENG_PNT,
     HM_BD_F_PNT,
-    HM_HD_F_PNT,
+    HM_HD_F_PNT2,
     HM_VS_F_PNT,
-    HM_F_PNT,
+    HM_F_PNT2,
     HM_BD_R_PNT,
-    HM_HD_R_PNT,
+    HM_HD_R_PNT2,
     HM_VS_R_PNT,
-    HM_R_PNT,
+    HM_R_PNT2,
     MUS_F_PNT,
     MUS_R_PNT,
-    RD_PNT,
+    RD_PNT2,
     ST_F_PNT,
     ST_R_PNT,
     front_damper2,
@@ -323,5 +323,5 @@ end
     v_z_carbody_vl,
     z_velocity_vl,
     VL_PNT,
-    Vehicle
+ #   2Vehicle
 )
