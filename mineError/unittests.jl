@@ -451,7 +451,7 @@ end
     @model testblock begin
         @block begin
             m = front_damper()
-            s1 = Step(steptime=0.1, finalvalue=5)
+            s1 = Step(steptime=0.1, finalvalue=5) ####
         end
         @connect begin
             s1.out => m.v_SUS_F_damper_mps

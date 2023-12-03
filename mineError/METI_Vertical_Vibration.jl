@@ -195,8 +195,8 @@ end
 
 @model SUS_F_PNT begin
     @parameter begin
-        L_ratio_Fr_sus = 1.2048
-        z_k_Fr_sus_ini = 0.10755
+        L_ratio_Fr_sus = 1.204819277108434
+        z_k_Fr_sus_ini = 0.107549917836991
         k_Fr_sus = 30690
     end
     @xmlmodel("METI_Vertical_Vibration.drawio", "SUS_F_PNT")
@@ -293,6 +293,7 @@ end
 
 ###
 
+
 @buildxml("models.xml",
     ENG_MNT_F_PNT,
     ENG_MNT_R_PNT,
@@ -325,3 +326,13 @@ end
     VL_PNT,
     Vehicle
 )
+
+#=
+
+@buildxml("models.xml",
+    front_damper,
+    SUS_F_PNT,
+    rear_damper,
+    SUS_R_PNT
+)
+=#
