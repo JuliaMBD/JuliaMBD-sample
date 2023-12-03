@@ -17,15 +17,15 @@ using Test
             step2.out => b1.v_VL2ENG_MNT_F_mps
         end
         @scope begin
-            b1.v_ENG2ENG_MNT_F_mps => v_ENG2ENG_MNT_F_mps
-            b1.v_VL2ENG_MNT_F_mps => v_VL2ENG_MNT_F_mps
+            #b1.v_ENG2ENG_MNT_F_mps => v_ENG2ENG_MNT_F_mps
+            #b1.v_VL2ENG_MNT_F_mps => v_VL2ENG_MNT_F_mps
             b1.F_ENG_MNT_F2ENG_N => F_ENG_MNT_F2ENG_N
             b1.F_ENG_MNT_F2VL_N => F_ENG_MNT_F2VL_N
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 @testset "ENG_MNT_R_PNT" begin
@@ -40,15 +40,15 @@ end
             step2.out => b1.v_VL2ENG_MNT_R_mps
         end
         @scope begin
-            b1.v_ENG2ENG_MNT_R_mps => v_ENG2ENG_MNT_R_mps
-            b1.v_VL2ENG_MNT_R_mps => v_VL2ENG_MNT_R_mps
+            #b1.v_ENG2ENG_MNT_R_mps => v_ENG2ENG_MNT_R_mps
+            #b1.v_VL2ENG_MNT_R_mps => v_VL2ENG_MNT_R_mps
             b1.F_ENG_MNT_R2ENG_N => F_ENG_MNT_R2ENG_N
             b1.F_ENG_MNT_R2VL_N => F_ENG_MNT_R2VL_N
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ####
@@ -65,8 +65,8 @@ end
             step2.out => b1.F_ENG_MNT_R2ENG_N
         end
         @scope begin
-            b1.F_ENG_MNT_F2ENG_N => F_ENG_MNT_F2ENG_N
-            b1.F_ENG_MNT_R2ENG_N => F_ENG_MNT_R2ENG_N
+            #b1.F_ENG_MNT_F2ENG_N => F_ENG_MNT_F2ENG_N
+            #b1.F_ENG_MNT_R2ENG_N => F_ENG_MNT_R2ENG_N
             b1.omg_ENG_pitch_rate_radps => omg_ENG_pitch_rate_radps
         end
     end
@@ -88,8 +88,8 @@ end
             step2.out => b1.F_ENG_MNT_R2ENG_N
         end
         @scope begin
-            b1.F_ENG_MNT_F2ENG_N => F_ENG_MNT_F2ENG_N
-            b1.F_ENG_MNT_R2ENG_N => F_ENG_MNT_R2ENG_N
+            #b1.F_ENG_MNT_F2ENG_N => F_ENG_MNT_F2ENG_N
+            #b1.F_ENG_MNT_R2ENG_N => F_ENG_MNT_R2ENG_N
             b1.v_ENG_mps => v_ENG_mps
         end
     end
@@ -111,8 +111,8 @@ end
             step2.out => b1.omg_ENG_pitch_rate_radps
         end
         @scope begin
-            b1.v_ENG_mps => v_ENG_mps
-            b1.omg_ENG_pitch_rate_radps => omg_ENG_pitch_rate_radps
+        #    b1.v_ENG_mps => v_ENG_mps
+        #    b1.omg_ENG_pitch_rate_radps => omg_ENG_pitch_rate_radps
             b1.v_ENG2ENG_MNT_F_mps => v_ENG2ENG_MNT_F_mps
             b1.v_ENG2ENG_MNT_R_mps => v_ENG2ENG_MNT_R_mps
         end
@@ -120,7 +120,7 @@ end
     
     m = @compile testblock()
     result = simulate(m, tspan=(0.0, 60.0));
-    display(plot(result, layout=(2,2)))
+    display(plot(result, layout=(1,2)))
 end
 
 @testset "ENG_PNT" begin
@@ -135,8 +135,8 @@ end
             step2.out => m.F_ENG_MNT_R2ENG_N
         end
         @scope begin
-            m.F_ENG_MNT_F2ENG_N => F_ENG_MNT_F2ENG_N
-            m.F_ENG_MNT_R2ENG_N => F_ENG_MNT_R2ENG_N
+            #m.F_ENG_MNT_F2ENG_N => F_ENG_MNT_F2ENG_N
+            #m.F_ENG_MNT_R2ENG_N => F_ENG_MNT_R2ENG_N
             m.v_ENG2ENG_MNT_F_mps => v_ENG2ENG_MNT_F_mps
             m.v_ENG2ENG_MNT_R_mps => v_ENG2ENG_MNT_R_mps
         end
@@ -144,7 +144,7 @@ end
     
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ####
@@ -163,9 +163,9 @@ end
             step3.out => b.F_ST_F2HM_F_N
         end
         @scope begin
-            b.F_HM_HD_F_N => F_HM_HD_F_N
-            b.F_HM_VS_F_N => F_HM_VS_F_N
-            b.F_ST_F2HM_F_N => F_ST_F2HM_F_N
+            #b.F_HM_HD_F_N => F_HM_HD_F_N
+            #b.F_HM_VS_F_N => F_HM_VS_F_N
+            #b.F_ST_F2HM_F_N => F_ST_F2HM_F_N
             b.v_HM_BD_F2HM_HD_F_mps => v_HM_BD_F2HM_HD_F_mps
             b.v_HM_BD_F2HM_VS_F_mps => v_HM_BD_F2HM_VS_F_mps
             b.v_HM_BD_F2ST_F_mps => v_HM_BD_F2ST_F_mps
@@ -174,7 +174,7 @@ end
     
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(3,2)))
+    display(plot(res, layout=(1,3)))
 end
 
 @testset "HM_HD_F_PNT" begin
@@ -187,7 +187,7 @@ end
             s1.out => m.v_HM_BD_F2HM_HD_mps
         end
         @scope begin
-            m.v_HM_BD_F2HM_HD_mps => v_HM_BD_F2HM_HD_mps
+            #m.v_HM_BD_F2HM_HD_mps => v_HM_BD_F2HM_HD_mps
             m.F_HM_HD_F_N => F_HM_HD_F_N
         end
     end
@@ -207,7 +207,7 @@ end
             s1.out => m.v_HM_BD_F2HM_VS_F_mps
         end
         @scope begin
-            m.v_HM_BD_F2HM_VS_F_mps => v_HM_BD_F2HM_VS_F_mps
+            #m.v_HM_BD_F2HM_VS_F_mps => v_HM_BD_F2HM_VS_F_mps
             m.F_HM_VS_F_N => F_HM_VS_F_N
         end
     end
@@ -227,7 +227,7 @@ end
             s1.out => m.F_ST_F2HM_F_N
         end
         @scope begin
-            m.F_ST_F2HM_F_N => F_ST_F2HM_F_N
+            #m.F_ST_F2HM_F_N => F_ST_F2HM_F_N
             m.v_HM_BD_F2ST_F_mps => v_HM_BD_F2ST_F_mps
         end
     end
@@ -253,9 +253,9 @@ end
             step3.out => b.F_ST_R2HM_R_N
         end
         @scope begin
-            b.F_HM_HD_R_N => F_HM_HD_R_N
-            b.F_HM_VS_R_N => F_HM_VS_R_N
-            b.F_ST_R2HM_R_N => F_ST_R2HM_R_N
+            #b.F_HM_HD_R_N => F_HM_HD_R_N
+            #b.F_HM_VS_R_N => F_HM_VS_R_N
+            #b.F_ST_R2HM_R_N => F_ST_R2HM_R_N
             b.v_HM_BD_R2HM_HD_R_mps => v_HM_BD_R2HM_HD_R_mps
             b.v_HM_BD_R2HM_VS_R_mps => v_HM_BD_R2HM_VS_R_mps
             b.v_HM_BD_R2ST_R_mps => v_HM_BD_R2ST_R_mps
@@ -264,7 +264,7 @@ end
     
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(3,2)))
+    display(plot(res, layout=(1,3)))
 end
 
 @testset "HM_HD_R_PNT" begin
@@ -277,7 +277,7 @@ end
             s1.out => m.v_HM_BD_R2HM_HD_R_mps
         end
         @scope begin
-            m.v_HM_BD_R2HM_HD_R_mps => v_HM_BD_R2HM_HD_R_mps
+            #m.v_HM_BD_R2HM_HD_R_mps => v_HM_BD_R2HM_HD_R_mps
             m.F_HM_HD_R_N => F_HM_HD_R_N
         end
     end
@@ -297,7 +297,7 @@ end
             s1.out => m.v_HM_BD_R2HM_VS_R_mps
         end
         @scope begin
-            m.v_HM_BD_R2HM_VS_R_mps => v_HM_BD_R2HM_VS_R_mps
+            #m.v_HM_BD_R2HM_VS_R_mps => v_HM_BD_R2HM_VS_R_mps
             m.F_HM_VS_R_N => F_HM_VS_R_N
         end
     end
@@ -317,7 +317,7 @@ end
             s1.out => m.F_ST_R2HM_R_N
         end
         @scope begin
-            m.F_ST_R2HM_R_N => F_ST_R2HM_R_N
+            #m.F_ST_R2HM_R_N => F_ST_R2HM_R_N
             m.v_HM_BD_R2ST_R_mps => v_HM_BD_R2ST_R_mps
         end
     end
@@ -341,15 +341,15 @@ end
             step2.out => b.F_TR_F2MUS_F_N
         end
         @scope begin
-            b.F_SUS_F2MUS_F_N => F_SUS_F2MUS_F_N
-            b.F_TR_F2MUS_F_N => F_TR_F2MUS_F_N 
+            #b.F_SUS_F2MUS_F_N => F_SUS_F2MUS_F_N
+            #b.F_TR_F2MUS_F_N => F_TR_F2MUS_F_N 
             b.v_MUS_F2SUS_F_mps => v_MUS_F2SUS_F_mps
             b.v_MUS_F2TR_F_mps => v_MUS_F2TR_F_mps
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ###
@@ -366,15 +366,15 @@ end
             step2.out => b.F_TR_R2MUS_R_N
         end
         @scope begin
-            b.F_SUS_R2MUS_R_N => F_SUS_R2MUS_R_N
-            b.F_TR_R2MUS_R_N => F_TR_R2MUS_R_N 
+            #b.F_SUS_R2MUS_R_N => F_SUS_R2MUS_R_N
+            #b.F_TR_R2MUS_R_N => F_TR_R2MUS_R_N 
             b.v_MUS_R2SUS_R_mps => v_MUS_R2SUS_R_mps
             b.v_MUS_R2TR_R_mps => v_MUS_R2TR_R_mps
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ###
@@ -409,15 +409,15 @@ end
             step2.out => p.v_VL2ST_F_mps
         end
         @scope begin
-            p.v_HM_BD_F2ST_F_mps => v_HM_BD_F2ST_F_mps
-            p.v_VL2ST_F_mps => v_VL2ST_F_mps
+            #p.v_HM_BD_F2ST_F_mps => v_HM_BD_F2ST_F_mps
+            #p.v_VL2ST_F_mps => v_VL2ST_F_mps
             p.F_ST_F2HM_F_N => F_ST_F2HM_F_N
             p.F_ST_F2VL_N => F_ST_F2VL_N
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ###
@@ -434,15 +434,15 @@ end
             step2.out => p.v_VL2ST_R_mps
         end
         @scope begin
-            p.v_HM_BD_R2ST_R_mps => v_HM_BD_R2ST_R_mps
-            p.v_VL2ST_R_mps => v_VL2ST_R_mps
+            #p.v_HM_BD_R2ST_R_mps => v_HM_BD_R2ST_R_mps
+            #p.v_VL2ST_R_mps => v_VL2ST_R_mps
             p.F_ST_R2HM_R_N => F_ST_R2HM_R_N 
             p.F_ST_R2VL_N => F_ST_R2VL_N
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ###
@@ -457,7 +457,7 @@ end
             s1.out => m.v_SUS_F_damper_mps
         end
         @scope begin
-            m.v_SUS_F_damper_mps => v_SUS_F_damper_mps
+            #m.v_SUS_F_damper_mps => v_SUS_F_damper_mps
             m.F_SUS_F_damper_N => F_SUS_F_damper_N
         end
     end
@@ -479,8 +479,8 @@ end
             s2.out => m.v_MUS_F2SUS_F_mps ###
         end
         @scope begin
-            m.v_VL2SUS_F_mps => v_VL2SUS_F_mps
-            m.v_MUS_F2SUS_F_mps => v_MUS_F2SUS_F_mps
+            #m.v_VL2SUS_F_mps => v_VL2SUS_F_mps
+            #m.v_MUS_F2SUS_F_mps => v_MUS_F2SUS_F_mps
             m.F_SUS_F2VL_N => F_SUS_F2VL_N
             m.F_SUS_F2MUS_F_N => F_SUS_F2MUS_F_N
         end
@@ -488,7 +488,7 @@ end
     
     m = @compile testblock() 
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ###
@@ -503,7 +503,7 @@ end
             s1.out => m.v_SUS_R_damper_mps
         end
         @scope begin
-            m.v_SUS_R_damper_mps => v_SUS_R_damper_mps
+            #m.v_SUS_R_damper_mps => v_SUS_R_damper_mps
             m.F_SUS_R_damper_N => F_SUS_R_damper_N
         end
     end
@@ -525,8 +525,8 @@ end
             s2.out => m.v_MUS_R2SUS_R_mps ###
         end
         @scope begin
-            m.v_VL2SUS_R_mps => v_VL2SUS_R_mps
-            m.v_MUS_R2SUS_R_mps => v_MUS_R2SUS_R_mps
+            #m.v_VL2SUS_R_mps => v_VL2SUS_R_mps
+            #m.v_MUS_R2SUS_R_mps => v_MUS_R2SUS_R_mps
             m.F_SUS_F2VL_N => F_SUS_F2VL_N
             m.F_SUS_R2MUS_R_N => F_SUS_R2MUS_R_N
         end
@@ -534,7 +534,7 @@ end
     
     m = @compile testblock() 
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ###
@@ -551,15 +551,15 @@ end
             step2.out => p.v_RD2TR_F_mps
         end
         @scope begin
-            p.v_MUS_F2TR_F_mps => v_MUS_F2TR_F_mps
-            p.v_RD2TR_F_mps => v_RD2TR_F_mps
+            #p.v_MUS_F2TR_F_mps => v_MUS_F2TR_F_mps
+            #p.v_RD2TR_F_mps => v_RD2TR_F_mps
             p.F_TR_F2MUS_F_N => F_TR_F2MUS_F_N
             p.F_TR_F2RD_N => F_TR_F2RD_N
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(2,2)))
+    display(plot(res, layout=(1,2)))
 end
 
 ###
@@ -576,15 +576,15 @@ end
             step2.out => p.v_RD2TR_R_mps
         end
         @scope begin
-            p.v_MUS_R2TR_R_mps => v_MUS_R2TR_R_mps
-            p.v_RD2TR_R_mps => v_RD2TR_R_mps
+            #p.v_MUS_R2TR_R_mps => v_MUS_R2TR_R_mps
+            #p.v_RD2TR_R_mps => v_RD2TR_R_mps
             p.F_TR_R2MUS_R_N => F_TR_R2MUS_R_N
             p.F_TR_R2RD_N => F_TR_R2RD_N
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    plot(res, layout=(2,2))
+    display(plot(res, layout=(1,2)))
 end
 
 ###
@@ -609,18 +609,18 @@ end
             step6.out => p.F_SUS_F2VL_N
         end
         @scope begin
-            p.F_ENG_MNT_F2VL_N => F_ENG_MNT_F2VL_N
-            p.F_ENG_MNT_R2VL_N => F_ENG_MNT_R2VL_N
-            p.F_ST_F2VL_N => F_ST_F2VL_N
-            p.F_ST_R2VL_N => F_ST_R2VL_N
-            p.F_SUS_R2VL_N => F_SUS_R2VL_N
-            p.F_SUS_F2VL_N => F_SUS_F2VL_N
+            #p.F_ENG_MNT_F2VL_N => F_ENG_MNT_F2VL_N
+            #p.F_ENG_MNT_R2VL_N => F_ENG_MNT_R2VL_N
+            #p.F_ST_F2VL_N => F_ST_F2VL_N
+            #p.F_ST_R2VL_N => F_ST_R2VL_N
+            #p.F_SUS_R2VL_N => F_SUS_R2VL_N
+            #p.F_SUS_F2VL_N => F_SUS_F2VL_N
             p.omg_VL_pitch_rate_radps => omg_VL_pitch_rate_radps
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(4,2)))
+    display(plot(res, layout=(1,1)))
 end
 
 @testset "v_z_carbody_vl" begin
@@ -643,18 +643,18 @@ end
             step6.out => p.F_Fr_sus
         end
         @scope begin
-            p.F_ENG_MNT_F2VL_N => F_ENG_MNT_F2VL_N
-            p.F_ENG_MNT_R2VL_N => F_ENG_MNT_R2VL_N
-            p.F_ST_F2VL_N => F_ST_F2VL_N
-            p.F_ST_R2VL_N => F_ST_R2VL_N
-            p.F_Rr_sus => F_Rr_sus
-            p.F_Fr_sus => F_Fr_sus
+            #p.F_ENG_MNT_F2VL_N => F_ENG_MNT_F2VL_N
+            #p.F_ENG_MNT_R2VL_N => F_ENG_MNT_R2VL_N
+            #p.F_ST_F2VL_N => F_ST_F2VL_N
+            #p.F_ST_R2VL_N => F_ST_R2VL_N
+            #p.F_Rr_sus => F_Rr_sus
+            #p.F_Fr_sus => F_Fr_sus
             p.v_VL_mps => v_VL_mps
         end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(4,2)))
+    display(plot(res, layout=(1,1)))
 end
 
 @testset "z_velocity_vl" begin
@@ -669,8 +669,8 @@ end
             step2.out => p.omg_VL_pitch_rate_radps
         end
         @scope begin
-            p.v_VL_mps => v_VL_mps
-            p.omg_VL_pitch_rate_radps => omg_VL_pitch_rate_radps
+            #p.v_VL_mps => v_VL_mps
+            #p.omg_VL_pitch_rate_radps => omg_VL_pitch_rate_radps
             p.v_VL2ENG_MNT_F_mps => v_VL2ENG_MNT_F_mps
             p.v_VL2ENG_MNT_R_mps => v_VL2ENG_MNT_R_mps
             p.v_VL2ST_F_mps => v_VL2ST_F_mps
@@ -681,7 +681,7 @@ end
     end
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(4,2)))
+    display(plot(res, layout=(2,3)))
 end
 
 @testset "VL_PNT" begin
@@ -704,12 +704,12 @@ end
             step6.out => m.F_SUS_F2VL_N
         end
         @scope begin
-            m.F_ENG_MNT_F2VL_N => F_ENG_MNT_F2VL_N
-            m.F_ENG_MNT_R2VL_N => F_ENG_MNT_R2VL_N
-            m.F_ST_F2VL_N => F_ST_F2VL_N
-            m.F_ST_R2VL_N => F_ST_R2VL_N
-            m.F_SUS_R2VL_N => F_SUS_R2VL_N
-            m.F_SUS_F2VL_N => F_SUS_F2VL_N
+            #m.F_ENG_MNT_F2VL_N => F_ENG_MNT_F2VL_N
+            #m.F_ENG_MNT_R2VL_N => F_ENG_MNT_R2VL_N
+            #m.F_ST_F2VL_N => F_ST_F2VL_N
+            #m.F_ST_R2VL_N => F_ST_R2VL_N
+            #m.F_SUS_R2VL_N => F_SUS_R2VL_N
+            #m.F_SUS_F2VL_N => F_SUS_F2VL_N
             m.v_VL2ENG_MNT_F_mps => v_VL2ENG_MNT_F_mps
             m.v_VL2ENG_MNT_R_mps => v_VL2ENG_MNT_R_mps
             m.v_VL2ST_F_mps => v_VL2ST_F_mps
@@ -721,7 +721,7 @@ end
     
     m = @compile testblock()
     res = simulate(m, tspan=[0, 60])
-    display(plot(res, layout=(3,4)))
+    display(plot(res, layout=(2,3)))
 end
 
 nothing
