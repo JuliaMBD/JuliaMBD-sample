@@ -199,7 +199,7 @@ end
         z_k_Fr_sus_ini = 0.10755
         k_Fr_sus = 30690
     end
-    @xmlmodel("METI_Vertical_Vibration.drawio", "SUS_F_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "SUS_F_PNT")
 end
 
 ###
@@ -221,7 +221,7 @@ end
         z_k_Rr_sus_ini = 0.076651
         k_Rr_sus = 30690
     end
-    @xmlmodel("METI_Vertical_Vibration.drawio", "SUS_R_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "SUS_R_PNT")
 end
 
 ###
@@ -282,7 +282,7 @@ end
 end
 
 @model VL_PNT begin
-    @xmlmodel("METI_Vertical_Vibration.drawio", "VL_PNT")
+    @xmlmodel("ReMETI_Vertical_Vibration.drawio", "VL_PNT")
 end
 
 ###
